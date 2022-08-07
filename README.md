@@ -1,6 +1,6 @@
 ## Repo to cover the basics of python 
 
-![python basics](python.png)
+![python basics](python.PNG)
 
 Create a virtual environment
 
