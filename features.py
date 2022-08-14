@@ -1,4 +1,3 @@
-
 from enum import Enum
 
 # The dir() function prints all of the attributes of a Python object.
@@ -19,7 +18,28 @@ class AvailableFeatures(Enum):
     DATE = "Date"
     TIME = "Time"
     PAYMENT = "Payment"
-    COGS = "cogs"
+    COST_OF_GOODS_SOLD = "cogs"
     GROSS_MARGIN_PERCENTAGE = "gross margin percentage"
     GROSS_INCOME = "gross income"
     RATING = "Rating"
+
+
+FEATURE_DICT = {
+    "Invoice ID": "INVOICE_ID",
+    "Branch": "BRANCH",
+    "City": "CITY",
+    "Customer type": "CUSTOMER_TYPE",
+    "Gender": "GENDER",
+    "Product line": "PRODUCT_LINE",
+    "Unit price": "UNIT_PRICE",
+    "Quantity": "QUANTITY",
+    "Tax 5%": "TAX",
+    "Total": "TOTAL",
+    "Date": "DATE",
+    "Time": "TIME",
+    "Payment": "PAYMENT",
+    "cogs": "COST_OF_GOODS_SOLD",
+    "gross margin percentage": "GROSS_MARGIN_PERCENTAGE",
+    "gross income": "GROSS_INCOME",
+    "Rating": "RATING",
+}
