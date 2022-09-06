@@ -2,7 +2,7 @@ import pandas as pd
 import logging
 from notebooks.config import DATA_PATH, TRAIN_TEST_SPLIT
 from cross_validation import k_fold_cross_validation
-from features import FEATURE_DICT
+from notebooks.features import FEATURE_DICT
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
