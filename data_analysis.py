@@ -1,6 +1,6 @@
 import pandas as pd
 import logging
-from config import DATA_PATH, TRAIN_TEST_SPLIT
+from notebooks.config import DATA_PATH, TRAIN_TEST_SPLIT
 from cross_validation import k_fold_cross_validation
 from features import FEATURE_DICT
 

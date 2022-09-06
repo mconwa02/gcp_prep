@@ -2,7 +2,7 @@ import logging
 
 from sklearn.model_selection import train_test_split
 
-from config import FEATURES, TARGET
+from notebooks.config import FEATURES, TARGET
 
 logger = logging.getLogger(__name__)
 
