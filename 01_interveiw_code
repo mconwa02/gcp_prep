@@ -4,39 +4,38 @@ X1 ~ normal(0, 1)
 X2 takes values {1, 2, 3} with respective probabilities {0.3, 0.6, 0.1}
 
 """
+from random import random
+import math
 import pandas as pd
 import random
 
-[0.2, 0.4, 0.8]
+test = [0.2, 0.4, 0.8]
 
 N = 1000
 
 
-
 df = pd.DataFrame(
-    data=[[lamba x: random(x) for x in range(100)], [1, 2, 3]],
-colums=['X1', 'X2']
+    data=[[lambda x: random(x) for x in range(100)], [1, 2, 3]], columns=["X1", "X2"]
 )
 
-df = pd.DataFrame(
-    data=[[lamba x: random(x) for x in range(100)], x2_generator(N, [1, 2, 3], [0.3, 0.6, 0.1]),
-colums=['X1', 'X2']
+df2 = pd.DataFrame(
+    data=[[lambda x: random(x) for x in range(100)]],
+    # x2_generator(N, [1, 2, 3], [0.3, 0.6, 0.1]),
+    columns=["X1", "X2"],
 )
 
 X = df.mean()
 STD = df.std()
 
-X +- ST D /sq(N)
-
-
-
+X + -STD / math.sqrt(N)
 
 
 def confidence_itnerval(df: pd.DataFrame, feature: str) -> tuple:
     avg = df[feature].mean()
     std = df[feature].std()
-    lower = avg - ST D /sq(df.shape[0])
-    upper = avg + ST D /sq(df.shape[0]
+    lower = avg - std / math.sqrt(df.shape[0])
+    upper = avg + std / math.sqrt(df.shape[0])
     return lower, upper
 
-lower, upper = confidence_itnerval(df, 'X1)
+
+lower, upper = confidence_itnerval(df, "X1")
